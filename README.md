@@ -1,6 +1,6 @@
 # 📅 Event Scheduler Application
 
-A full-stack application for managing events, meetings, and attendees. This project features a **robust .NET 8 Web API backend** with **PostgreSQL** and a **responsive React frontend** styled with custom Vanilla CSS.
+A full-stack application for managing events, meetings, and attendees. This project features a **robust .NET 8 Web API backend** with **MSSQL** and a **responsive React frontend** styled with custom Vanilla CSS.
 
 ---
 
@@ -10,7 +10,7 @@ A full-stack application for managing events, meetings, and attendees. This proj
 * **Manage Attendees:** Add multiple attendees with name & email.
 * **Dashboard View:** View all upcoming events in a responsive layout.
 * **Delete Events:** Remove events and their associated data.
-* **PostgreSQL Integration:** Persistent storage using **Entity Framework Core**.
+* **MSSQL Integration:** Persistent storage using **Entity Framework Core**.
 * **Responsive UI:** Works seamlessly across devices.
 * **Unit Testing:** Service layer tested using **XUnit** with **In-Memory DB**.
 
@@ -20,7 +20,7 @@ A full-stack application for managing events, meetings, and attendees. This proj
 
 ### 🔹 Backend
 * **Framework:** .NET 8 Web API (C#)
-* **Database:** PostgreSQL
+* **Database:** MSSQL
 * **ORM:** Entity Framework Core
 * **Testing:** xUnit, FluentAssertions, Moq
 * **Docs:** Swagger / OpenAPI
@@ -66,9 +66,9 @@ A full-stack application for managing events, meetings, and attendees. This proj
 
 Ensure you have installed:
 
-✔ .NET 8 SDK
+✔ .NET 9 SDK
 ✔ Node.js 16+
-✔ PostgreSQL
+✔ MSSQL
 ✔ VS Code / Visual Studio (Recommended)
 
 ---
@@ -85,8 +85,9 @@ Update connection string inside `appsettings.json`:
 
 ```json
 "ConnectionStrings": {
-  "DefaultConnection": "Host=localhost;Port=5432;Database=EventDb;Username=postgres;Password=your_password"
+  "DefaultConnection": "Server=localhost;Database=EventDb;User Id=sa;Password=your_password;Trusted_Connection=False;MultipleActiveResultSets=True;"
 }
+
 ```
 
 Apply migrations:
