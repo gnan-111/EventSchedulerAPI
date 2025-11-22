@@ -1,0 +1,128 @@
+/* Import Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Global for font + smooth animation */
+* {
+  transition: 0.3s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar container */
+.nav-container {
+  width: 100%;
+  background: linear-gradient(90deg, #0a2342, #38649c, #0a2342);
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Navbar inner wrapper */
+.nav-inner {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  margin: 0 auto;
+}
+
+/* Left logo + title */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-logo {
+  color: #ffffff;
+}
+
+.nav-title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+}
+
+/* Desktop menu links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  padding: 4px 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #e5e5e5;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #ffffff;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+
+/* Mobile menu button */
+.nav-mobile-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/* Mobile menu */
+.nav-mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #1a3c68;
+  padding: 12px 0;
+  border-radius: 0 0 12px 12px;
+}
+
+.nav-mobile-link {
+  padding: 14px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.nav-mobile-link:hover,
+.nav-mobile-link.active {
+  background-color: #16355e;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-mobile-btn {
+    display: block;
+  }
+
+  .nav-mobile-menu {
+    display: flex;
+  }
+}

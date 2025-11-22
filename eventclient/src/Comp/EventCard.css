@@ -1,0 +1,100 @@
+
+
+.event-card {
+  background: #eef2ff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.card-desc {
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 25px 10px 10px 10px;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.delete-btn:hover {
+  color: #ef4444;
+}
+
+.delete-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.icon-primary {
+  color: var(--primary);
+}
+
+.attendees-section {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+
+.attendee-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.attendee-tag {
+  background-color: #eef2ff;
+  color: var(--primary);
+  padding: 0.25rem 0.65rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
